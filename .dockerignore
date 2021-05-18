@@ -1,0 +1,4 @@
+run_docker.sh
+.git*
+README.md
+Dockerfile
