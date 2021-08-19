@@ -1,6 +1,7 @@
 # 🟢 telegram_online 
 
 > The only way to protect ourselves is with a preemptive strike
+> 
 > Alexander the Great
 
 ### Preamble
@@ -19,8 +20,8 @@ Based on [danog/MadelineProto](https://github.com/danog/MadelineProto)
 
 ### Docker
 
-For running: ./run_docker.sh
+For running: `./run_docker.sh`
 
 Firstly you should enter info regarding your account (Madeline)
 
-Second run ./run_docker.sh will run in background
+Second run `./run_docker.sh` will run in background
