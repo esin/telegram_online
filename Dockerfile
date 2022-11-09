@@ -6,13 +6,9 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y software-properties-common && \
     LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php -y && apt-get update && \
-    apt-get install -y php7.4 php7.4-dev php7.4-xml php7.4-zip php7.4-gmp php7.4-cli php7.4-mbstring php7.4-json git \
-    libopus-dev libssl-dev build-essential sudo && \
-    apt-get install -y libopus-dev libssl-dev php$(echo "<?php echo PHP_MAJOR_VERSION.'.'.PHP_MINOR_VERSION;" | php)-dev && \
-    git clone https://github.com/danog/PHP-CPP && cd PHP-CPP && make -j$(nproc) &&  make install && cd .. && \
-    git clone --recursive https://github.com/danog/php-libtgvoip && cd php-libtgvoip && make && make install && cd .. && \
-    git clone https://github.com/danog/PrimeModule-ext && cd PrimeModule-ext && make -j$(nproc) &&  make install
-
+    apt-get install php8.1 php8.1-dev php8.1-xml php8.1-zip php8.1-gmp php8.1-cli php8.1-mbstring php8.1-ffi git libevent-dev -y && \
+    pecl channel-update pecl.php.net && pecl install ev && pecl install event && \
+    echo "extension=sockets.so" >> /etc/php/8.1/cli/php.ini && echo "extension=ev.so" >> /etc/php/8.1/cli/php.ini && echo "extension=event.so" >> /etc/php/8.1/cli/php.ini
 
 WORKDIR /tg
 
