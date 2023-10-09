@@ -8,7 +8,7 @@
 
 The only one way to hide real status in Telegram - be online forever
 
-(anyway, you can use official option disable showing Last seen & Online for everyone, but you won't see Last Seen and Oline)
+(anyway, you can use official option disable showing Last seen & Online for everyone, but you won't see Last Seen and Online)
 
 ### About project
 
