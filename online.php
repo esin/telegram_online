@@ -9,6 +9,6 @@ $MadelineProto = new \danog\MadelineProto\API('session.madeline');
 $MadelineProto->start();
 
 while(1) {
-    $MadelineProto->account->updateStatus(['offline' => false,]);
+    $MadelineProto->account->updateStatus(offline: false, );
     sleep(5);
 }

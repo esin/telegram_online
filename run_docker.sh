@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if [ ! -f session.madeline ]; then
+if [ ! -d session.madeline ]; then
     echo "First run"
-    docker run -ti -v ${PWD}:/tg es1n/telegram_online:latest
+    docker run -ti -v ${PWD}:/app es1n/telegram_online:latest php /app/online.php
     exit 0
 fi
 
-docker run -d --restart always --name telegram_online -v ${PWD}:/tg es1n/telegram_online:latest
+docker run --restart always  -d --name telegram_online -v ${PWD}:/app hub.madelineproto.xyz/danog/madelineproto:latest php /app/online.php
 exit 0
