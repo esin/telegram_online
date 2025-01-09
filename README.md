@@ -14,7 +14,7 @@ The only one way to hide real status in Telegram - be online forever
 
 This Telegram client will bring your user online every 5 seconds
 
-Real example: [@not_offline](https://t.me/not_offline)
+Real example: [@not_offline](https://t.me/not_offline) (there are just a bot, not a human)
 
 Based on [danog/MadelineProto](https://github.com/danog/MadelineProto)
 
@@ -22,6 +22,6 @@ Based on [danog/MadelineProto](https://github.com/danog/MadelineProto)
 
 For running: `./run_docker.sh`
 
-Firstly you should enter info regarding your account (Madeline)
+Firstly you should enter info regarding your account 
 
 Second run `./run_docker.sh` will run in background
